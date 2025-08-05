@@ -10,9 +10,9 @@ import numpy as np
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-dia_mod=pickle.load(open("trained_model.sav"))
-ht_mod=pickle.load(open("heart_model.sav"))
-par_mod=pickle.load(open("parkinson_pre.sav"))
+dia_mod=pickle.load(open("trained_model.sav",'rb'))
+ht_mod=pickle.load(open("heart_model.sav",'rb'))
+par_mod=pickle.load(open("parkinson_pre.sav",'rb'))
 
 with st.sidebar:
     selected=option_menu('Multiplr Disease Prediction System',
@@ -185,5 +185,6 @@ if(selected=='Parkinsons Prediction'):
             diagnosis="The person has no Parkinson's  disease"
 
     st.success(diagnosis)
+
 
 
