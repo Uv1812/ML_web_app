@@ -15,7 +15,7 @@ ht_mod=pickle.load(open("heart_model.sav",'rb'))
 par_mod=pickle.load(open("parkinson_pre.sav",'rb'))
 
 with st.sidebar:
-    selected=option_menu('Multiplr Disease Prediction System',
+    selected=option_menu('Multiple Disease Prediction System',
                          ['Diabetes Prediction',
                           'Heart Disease Prediction',
                           'Parkinsons Prediction'],
@@ -185,6 +185,7 @@ if(selected=='Parkinsons Prediction'):
             diagnosis="The person has no Parkinson's  disease"
 
     st.success(diagnosis)
+
 
 
 
